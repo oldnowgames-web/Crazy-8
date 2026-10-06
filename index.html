@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Crazy 8</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=EB+Garamond:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="score">Crazy 8</div>
+    <div class="tools"><button class="tb" id="snd" title="Silenciar">🔊</button><button class="tb" id="rules">Regras</button><button class="tb" id="new">Reiniciar</button><button class="tb" id="tomenu">Menu</button></div>
+  </header>
+  <div id="banner" class="me"></div>
+  <main class="rim"><div class="felt">
+    <div id="cpus"></div>
+    <div class="center">
+      <div class="stack"><img id="deck" alt=""><span class="cap">Monte · <span id="dleft"></span></span></div>
+      <div class="stack"><div id="pile"></div><span class="cap">Mesa</span></div>
+      <div class="stack"><div id="suit"></div><span class="cap">Naipe</span></div>
+    </div>
+    <div style="width:100%"><div id="msg"></div><div id="picker" hidden></div><div class="hand me" id="me"></div></div>
+  </div></main>
+</div>
+<div class="ov" id="menu"><div class="box">
+  <div id="fan"></div>
+  <h1>CRAZY 8</h1>
+  <p class="sub">O clássico jogo de cartas contra o computador</p>
+  <div class="col"><button id="mplay">▶ Jogar</button><button class="alt" id="mhow">Como jogar</button><button class="alt" id="mfs">⛶ Tela cheia</button></div>
+  <p class="sub" id="fshint" style="font-size:14px"></p>
+</div></div>
+<div class="ov" id="setup" hidden><div class="box">
+  <h2>Preparar o jogo</h2>
+  <div class="opt"><div class="olab">Adversários</div><div class="seg" id="optopp"></div></div>
+  <div class="opt"><div class="olab">Cor da mesa</div><div class="seg" id="opttheme"></div></div>
+  <div class="opt"><div class="olab">Estilo das cartas</div><div class="seg" id="optback"></div></div>
+  <div class="col"><button class="go" id="sstart">▶ Começar</button><button class="alt" id="sback">Voltar</button></div>
+</div></div>
+<div class="ov" id="end" hidden style="z-index:20;background:#120a05b0"><div class="box"><h1 id="et" style="font-size:clamp(28px,8vw,46px);letter-spacing:.06em"></h1><div class="col"><button class="go" id="eagain">Jogar de novo</button><button class="alt" id="emenu">Menu</button></div></div></div>
+<canvas id="cf" hidden></canvas>
+<div class="ov" id="tuto" hidden><div class="box">
+  <h2 id="tt"></h2><div id="tb"></div>
+  <div class="nav"><button class="alt" id="tprev">◀ Voltar</button><span id="tn"></span><button class="go" id="tnext"></button></div>
+  <button class="sk" id="tskip">Pular tutorial</button>
+</div></div>
+<script src="script.js"></script>
+</body>
+</html>
