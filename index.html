@@ -10,8 +10,8 @@
 <body>
 <div id="app">
   <header>
-    <div class="score">Crazy 8</div>
-    <div class="tools"><button class="tb" id="snd" title="Silenciar">🔊</button><button class="tb" id="rules">Regras</button><button class="tb" id="new">Reiniciar</button><button class="tb" id="tomenu">Menu</button></div>
+    <div class="score" id="ttl">Crazy 8</div>
+    <div class="tools"><button class="tb" id="snd" title="Silenciar">Som</button><button class="tb" id="rules">Regras</button><button class="tb" id="new">Reiniciar</button><button class="tb" id="tomenu">Menu</button></div>
   </header>
   <div id="banner" class="me"></div>
   <main class="rim"><div class="felt">
@@ -26,11 +26,13 @@
 </div>
 <div class="ov" id="menu"><div class="box">
   <div id="fan"></div>
-  <h1>CRAZY 8</h1>
-  <p class="sub">O clássico jogo de cartas contra o computador</p>
-  <div class="col"><button id="mplay">▶ Jogar</button><button class="alt" id="mhow">Como jogar</button><button class="alt" id="mfs">⛶ Tela cheia</button></div>
+  <h1 style="font-size:clamp(28px,8.5vw,46px)">JOGOS DE CARTAS</h1>
+  <p class="sub">Escolha seu jogo e jogue contra o computador</p>
+  <div class="col"><button id="mplay">▶ Jogar</button><button class="alt" id="mhow">Como jogar</button><button class="alt" id="mfs"> Tela cheia</button></div>
   <p class="sub" id="fshint" style="font-size:14px"></p>
 </div></div>
+<div class="ov" id="modes" hidden><div class="box"><h2>Escolha o jogo</h2><div class="modes" id="mlist"></div><div class="col"><button class="alt" id="mback">Voltar</button></div></div></div>
+<div class="ov" id="explain" hidden><div class="box"><h2 id="xt"></h2><p id="xb"></p><div class="col"><button class="go" id="xgo"></button><button class="alt" id="xback"></button></div></div></div>
 <div class="ov" id="setup" hidden><div class="box">
   <h2>Preparar o jogo</h2>
   <div class="opt"><div class="olab">Adversários</div><div class="seg" id="optopp"></div></div>
@@ -38,6 +40,7 @@
   <div class="opt"><div class="olab">Estilo das cartas</div><div class="seg" id="optback"></div></div>
   <div class="col"><button class="go" id="sstart">▶ Começar</button><button class="alt" id="sback">Voltar</button></div>
 </div></div>
+<div class="ov" id="tg" hidden><div id="tgw"><header><div class="score" id="tgt"></div><span class="score" id="tgs"></span><div class="tools"><button class="tb" id="tgr">Reiniciar</button><button class="tb" id="tgm">Menu</button></div></header><div id="tgb" class="bn me"></div><main class="rim"><div class="felt" id="tgf"><div id="tgo"></div><div id="tgc"></div><div id="tgx"></div><div id="tgp"></div></div></main></div></div>
 <div class="ov" id="end" hidden style="z-index:20;background:#120a05b0"><div class="box"><h1 id="et" style="font-size:clamp(28px,8vw,46px);letter-spacing:.06em"></h1><div class="col"><button class="go" id="eagain">Jogar de novo</button><button class="alt" id="emenu">Menu</button></div></div></div>
 <canvas id="cf" hidden></canvas>
 <div class="ov" id="tuto" hidden><div class="box">
@@ -45,6 +48,7 @@
   <div class="nav"><button class="alt" id="tprev">◀ Voltar</button><span id="tn"></span><button class="go" id="tnext"></button></div>
   <button class="sk" id="tskip">Pular tutorial</button>
 </div></div>
-<script src="script.js"></script>
+<script src="game.js"></script>
+<script src="modes.js"></script>
 </body>
 </html>
